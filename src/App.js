@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { useState } from "react";
+import Switch from "./components/toggleBtn";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [isToggle,setIsToggle] = useState(true);
+ 
+  return <div className="App">
+    <Switch varient="over" isToggle={isToggle} onToggle={()=> setIsToggle(!isToggle)}  />
+  </div>;
 }
 
 export default App;

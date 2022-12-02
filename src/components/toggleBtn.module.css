@@ -1,0 +1,87 @@
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 34px; 
+}
+.switchF{
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 20px;
+}
+.switch input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.switchF input{
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.526);
+    border-radius: 50px;
+}
+.sliderF{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.526);
+    border-radius: 50px;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left :4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+
+}
+.sliderF:before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgb(146, 146, 146);
+    border-radius: 50%;
+    transition: 0.2s;
+    margin-bottom: -3px;
+}
+
+input:checked + .slider:before{
+    transform: translateX(30px);
+
+    background-color: white;
+    
+}
+input:checked + .sliderF:before{
+    transform: translateX(30px);
+
+    background-color: rgb(52, 103, 165);
+    
+}
+input:checked + .slider{
+    background-color: rgb(10, 119, 252);
+}
+input:checked + .sliderF{
+    background-color: rgb(10, 119, 252);
+}

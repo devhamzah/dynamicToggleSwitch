@@ -4,10 +4,16 @@ import Switch from "./components/toggleBtn";
 
 
 function App() {
-  const [isToggle,setIsToggle] = useState(true);
+  const [isToggle,setIsToggle] = useState(false);
  
   return <div className="App">
-    <Switch varient="over" isToggle={isToggle} onToggle={()=> setIsToggle(!isToggle)}  />
+
+
+    {/* MY CUSTOM SWITCH  */}
+
+    <Switch  varient=""  isToggle={isToggle} onToggle={()=> setIsToggle(!isToggle)}  />
+
+
   </div>;
 }
 
